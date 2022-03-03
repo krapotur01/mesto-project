@@ -1,0 +1,35 @@
+.header {
+  grid-area: header;
+  margin: 45px auto 40px;
+  width: 68.75%;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 40px;
+  border-bottom: 1px solid rgba(84, 84, 84, .7);
+}
+
+@media screen and (max-width: 855px) {
+  .header {
+    margin-top: 35px;
+    width: 82%;
+  }
+
+  .header::after {
+    padding-top: 34px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    margin: 28px auto 42px;
+    width: 100%;
+  }
+
+  .header::after {
+    padding-top: 30.6px;
+  }
+}

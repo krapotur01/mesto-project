@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Mesto</title>
+</head>
+<body class="root">
+  <div class="page">
+    <header class="header">
+        <div class="header__logo"></div>
+    </header>
+
+    <main class="content">
+      <section class="profile">
+        <div class="profile__info">
+          <div class="profile__avatar"></div>
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__button profile__button_edit" aria-label="Редактировать профиль"></button>
+          <p class="profile__text">Исследователь океана</p>
+        </div>
+
+        <button class="profile__button profile__button_add" aria-label="Добавить изображение"></button>
+      </section>
+
+      <ul class="cards">
+        <li class="card__item">
+          <img src="./blocks/cards/__image/kirill-pershin-1088404-unsplash.jpg" alt="" class="card__image">
+          <div class="card__group">
+            <h2 class="card__heading">Карачаевск</h2>
+            <button class="card__like card__like_active" aria-label="like"></button>
+          </div>
+        </li>
+
+        <li class="card__item">
+          <img src="./blocks/cards/__image/kirill-pershin-1404681-unsplash.jpg" alt="" class="card__image">
+          <div class="card__group">
+            <h2 class="card__heading">Карачаевск</h2>
+            <button class="card__like card__like_active" aria-label="like"></button>
+          </div>
+        </li>
+
+        <li class="card__item">
+          <img src="./blocks/cards/__image/kirill-pershin-1556355-unsplash.png" alt="" class="card__image">
+          <div class="card__group">
+            <h2 class="card__heading">Карачаевск</h2>
+            <button class="card__like card__like_active" aria-label="like"></button>
+          </div>
+        </li>
+
+        <li class="card__item">
+          <img src="./blocks/cards/__image/kirill-pershin-1088404-unsplash.jpg" alt="" class="card__image">
+          <div class="card__group">
+            <h2 class="card__heading">Карачаевск</h2>
+            <button class="card__like card__like_active" aria-label="like"></button>
+          </div>
+        </li>
+
+        <li class="card__item">
+          <img src="./blocks/cards/__image/kirill-pershin-1088404-unsplash.jpg" alt="" class="card__image">
+          <div class="card__group">
+            <h2 class="card__heading">Карачаевск</h2>
+            <button class="card__like card__like_active" aria-label="like"></button>
+          </div>
+        </li>
+
+        <li class="card__item">
+          <img src="./blocks/cards/__image/kirill-pershin-1404681-unsplash.jpg" alt="" class="card__image">
+          <div class="card__group">
+            <h2 class="card__heading">Карачаевск</h2>
+            <button class="card__like card__like_active" aria-label="like"></button>
+          </div>
+        </li>
+      </ul>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
+    </footer>
+
+    <section class="popup popup__opened_edit">
+      <div class="popup__container">
+        <button class="popup__close-icon" aria-label="Закрыть"></button>
+        <div class="popup__form">
+          <h2 class="popup__heading">Редактировать профиль</h2>
+          <input type="text" name="firstname secondname" value="Жак-Ив Кусто" class="popup__input popup__input_text">
+          <input type="text" name="info" value="Исследователь океана" class="popup__input popup__input_text popup__input_text_info">
+          <button class="popup__input popup__input_button" aria-label="Сохранить">Сохранить</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="popup popup__opened_add">
+      <div class="popup__container">
+        <div class="popup__form">
+          <h2 class="popup__heading">Редактировать профиль</h2>
+          <input type="text" name="firstname secondname" value="Жак-Ив Кусто" class="popup__input popup__input_text">
+          <input type="text" name="info" value="Исследователь океана" class="popup__input popup__input_text popup__input_text_info">
+          <button class="popup__input popup__input_button" aria-label="Сохранить">Сохранить</button>
+        </div>
+        <button class="popup__close-icon" aria-label="Закрыть"></button>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

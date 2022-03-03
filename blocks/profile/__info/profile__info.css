@@ -1,0 +1,18 @@
+.profile__info {
+  display: grid;
+  grid-template-areas:
+  "img name edit"
+  "img info info";
+}
+
+@media screen and (max-width: 425px) {
+  .profile__info {
+    margin: 0 auto;
+    grid-template-columns: 1fr min-content;
+    grid-template-areas:
+    "img img"
+    "name edit"
+    "info info";
+    column-gap: 10px;
+  }
+}

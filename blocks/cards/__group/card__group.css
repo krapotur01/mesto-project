@@ -1,0 +1,10 @@
+.card__group {
+  max-width: 246px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 25px 0 31px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  color: rgba(0, 0, 0, 1);
+  align-items: center;
+}
