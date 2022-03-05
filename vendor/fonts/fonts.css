@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url(../fonts/Inter/Inter-Medium.ttf) format('ttf');
+  src: url(../fonts/Inter/Inter-Medium.ttf);
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url(../fonts/Inter/Inter-Black.ttf) format('ttf');
+  src: url(../fonts/Inter/Inter-Black.ttf);
   font-weight: 900;
 }
