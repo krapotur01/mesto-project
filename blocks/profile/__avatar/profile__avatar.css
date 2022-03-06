@@ -2,8 +2,6 @@
   width: 120px;
   height: 120px;
   grid-area: img;
-  background-image: url(./profile__avatar.jpg);
-  background-size: cover;
   border-radius: 100%;
   margin-bottom: 10px;
 }

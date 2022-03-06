@@ -1,7 +1,22 @@
 .popup__container {
-  max-width: 1280px;
-  height: auto;
-  margin: 0 auto;
+  height: min-content;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media screen and (max-width: 568px) {
+  .popup__container {
+    gap: 5px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .popup__container {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: min-content;
+    margin: 87px auto;
+  }
 }

@@ -18,3 +18,10 @@
     margin: 48px  auto 36px 27px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .footer {
+    width: 100%;
+    margin-left: 17px;
+  }
+}

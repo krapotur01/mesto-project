@@ -2,13 +2,7 @@
   grid-area: header;
   margin: 45px auto 40px;
   width: 68.75%;
-}
-
-.header::after {
-  content: '';
-  display: block;
-  width: 100%;
-  padding-top: 40px;
+  padding-bottom: 40px;
   border-bottom: 1px solid rgba(84, 84, 84, .7);
 }
 

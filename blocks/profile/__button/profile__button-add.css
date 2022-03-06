@@ -1,39 +1,32 @@
-.profile__button_add {
+.profile__button-add {
   border: 2px solid rgba(255, 255, 255, 1);
   border-radius: 2px;
   align-self: center;
-  background-image: url(./botton_add.svg);
+  background-image: url(../../../image/botton_add.svg);
   padding: 23.02px 73px;
   margin-left: 20px;
   background-size: 22px;
+  height: 50px;
 }
 
 @media screen and (max-width: 950px) {
-  .profile__button_add {
+  .profile__button-add {
     padding: 20px 60px;
     margin-left: 0;
-    background-size: 19px;
-  }
-}
-
-@media screen and (max-width: 707px) {
-  .profile__button_add {
-    background-size: 22px;
+    /* background-size: 19px; */
   }
 }
 
 @media screen and (max-width: 516px) {
-  .profile__button_add {
-    padding: 23.02px 49%;
+  .profile__button-add {
+    width: 282px;
     margin: 10px auto 36px;
-    background-size: 22px;
+    background-size: 17px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .profile__button_add {
-    padding: 23.02px 44.6%;
+  .profile__button-add {
     margin: 36px auto;
-    background-size: 22px;
   }
 }

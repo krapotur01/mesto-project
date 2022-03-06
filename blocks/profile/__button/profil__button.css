@@ -1,5 +1,5 @@
 .profile__button {
-  background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, .1);
   cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;

@@ -1,16 +1,16 @@
-.profile__button_edit {
+.profile__button-edit {
   grid-area: edit;
   margin-bottom: 16px;
   align-self: end;
   padding: 11px;
   border: 1px solid rgba(255, 255, 255, 1);
-  background-image: url(./button_edit.svg);
+  background-image: url(../../../image/button_edit.svg);
   background-size: 10px;
 }
 
 
 @media screen and (max-width: 950px) {
-  .profile__button_edit {
+  .profile__button-edit {
     margin-bottom: 14px;
     padding: 9px 10px 11px;
     background-size: 8px;
@@ -18,7 +18,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .profile__button_edit {
+  .profile__button-edit {
     margin: 0 10px 15.5px 0;
     padding: 9.8px;
     background-size: 10px;
@@ -26,7 +26,7 @@
 }
 
 @media screen and (max-width: 556px) {
-  .profile__button_edit {
+  .profile__button-edit {
     margin-bottom: 20px;
     padding: 8px;
     background-size: 9px;
@@ -34,7 +34,7 @@
 }
 
 @media screen and (max-width: 425px) {
-  .profile__button_edit {
+  .profile__button-edit {
     width: 22px;
     justify-self: end;
     padding: 8px 10px 10px;
