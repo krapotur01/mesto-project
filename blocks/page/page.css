@@ -2,6 +2,7 @@
     max-width: 1280px;
     color: rgba(255, 255, 255, 1);
     margin: 0 auto;
+    position: relative;
     grid-template-areas:
     "header . ."
     "profile profile profile"
