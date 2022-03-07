@@ -1,4 +1,4 @@
-.profile__button_add {
+.profile__button_popup_add {
   border: 2px solid rgba(255, 255, 255, 1);
   border-radius: 2px;
   align-self: center;
@@ -10,22 +10,22 @@
 }
 
 @media screen and (max-width: 950px) {
-  .profile__button_add {
+  .profile__button_popup_add {
     padding: 20px 60px;
     margin-left: 0;
   }
 }
 
 @media screen and (max-width: 516px) {
-  .profile__button_add {
+  .profile__button_popup_add {
     width: 282px;
     margin: 10px auto 36px;
-    background-size: 17px;
+    background-size: 16px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .profile__button_add {
-    margin: 36px auto;
+  .profile__button_popup_add {
+    margin: 32px auto 35px;
   }
 }
