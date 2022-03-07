@@ -6,6 +6,7 @@
   justify-content: center;
   align-content: center;
   gap: 8px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 568px) {
