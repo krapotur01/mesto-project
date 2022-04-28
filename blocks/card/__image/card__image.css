@@ -1,5 +1,6 @@
 .card__image {
-  max-width: 282px;
+  width: 282px;
+  height: 282px;
   background: rgba(196, 196, 196, 1);
   border-radius: 10px 10px 0px 0px;
 }

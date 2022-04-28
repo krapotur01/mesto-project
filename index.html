@@ -27,53 +27,15 @@
 
       <section class="galery">
         <ul class="galery__cards">
-          <li class="card__item">
-            <img src="./image/kirill-pershin-1088404-unsplash.jpg" alt="Заброшенная часовня" class="card__image">
-            <div class="card__group">
-              <h2 class="card__heading">Карачаевск</h2>
-              <button type="button" class="card__like" aria-label="Иконка лайка"></button>
-            </div>
-          </li>
-
-          <li class="card__item">
-            <img src="./image/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус на горизонте" class="card__image">
-            <div class="card__group">
-              <h2 class="card__heading">Гора Эльбрус</h2>
-              <button type="button" class="card__like" aria-label="Иконка лайка"></button>
-            </div>
-          </li>
-
-          <li class="card__item">
-            <img src="./image/kirill-pershin-1556355-unsplash.png" alt="Вершины Домбая" class="card__image">
-            <div class="card__group">
-              <h2 class="card__heading">Домбай</h2>
-              <button type="button" class="card__like" aria-label="Иконка лайка"></button>
-            </div>
-          </li>
-
-          <li class="card__item">
-            <img src="./image/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус на горизонте" class="card__image">
-            <div class="card__group">
-              <h2 class="card__heading">Гора Эльбрус</h2>
-              <button type="button" class="card__like" aria-label="Иконка лайка"></button>
-            </div>
-          </li>
-
-          <li class="card__item">
-            <img src="./image/kirill-pershin-1556355-unsplash.png" alt="" class="Вершины Домбая">
-            <div class="card__group">
-              <h2 class="card__heading">Домбай</h2>
-              <button type="button" class="card__like" aria-label="Иконка лайка"></button>
-            </div>
-          </li>
-
-          <li class="card__item">
-            <img src="./image/kirill-pershin-1088404-unsplash.jpg" alt="Заброшенная часовня" class="card__image">
-            <div class="card__group">
-              <h2 class="card__heading">Карачаево-Черкесская республика</h2>
-              <button type="button" class="card__like" aria-label="Иконка лайка"></button>
-            </div>
-          </li>
+          <template id="card__template">
+            <li class="card__item">
+              <img class="card__image">
+              <div class="card__group">
+                <h2 class="card__heading"></h2>
+                <button type="button" class="card__like" aria-label="Иконка лайка"></button>
+              </div>
+            </li>
+          </template>
         </ul>
       </section>
     </main>
@@ -82,17 +44,31 @@
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
 
-    <section class="popup">
+    <section id="popup_edit" class="popup">
       <div class="popup__container">
         <form method="get" action="#"  name="form-profile" class="popup__form">
           <h2 class="popup__heading">Редактировать профиль</h2>
           <input type="text" name="profile-name" value="Жак-Ив Кусто" class="popup__input popup__input_text_name">
           <input type="text" name="info" value="Исследователь океана" class="popup__input popup__input_text_info">
-          <button type="button" class="popup__button" aria-label="Сохранить">Сохранить</button>
+          <button type="submit" class="popup__button" aria-label="Сохранить">Сохранить</button>
+        </form>
+        <button class="popup__close-icon" aria-label="Закрыть"></button>
+      </div>
+    </section>
+
+    <section id="popup_add" class="popup">
+      <div class="popup__container">
+        <form method="get" action="#"  name="form-add_card" class="popup__form">
+          <h2 class="popup__heading">Новое место</h2>
+          <input type="text" placeholder="Название" name="card-name" class="popup__input popup__input_text_name">
+          <input type="text" placeholder="Ссылка на картинку" name="card-link" class="popup__input popup__input_text_info">
+          <button type="submit" class="popup__button" aria-label="Создать">Создать</button>
         </form>
         <button class="popup__close-icon" aria-label="Закрыть"></button>
       </div>
     </section>
   </div>
+
+  <script src="/pages/index.js"></script>
 </body>
 </html>
