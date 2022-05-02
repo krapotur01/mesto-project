@@ -30,6 +30,7 @@
           <template id="card__template">
             <li class="card__item">
               <img class="card__image">
+              <button type="button" class="card__trash" aria-label="Иконка удаления"></button>
               <div class="card__group">
                 <h2 class="card__heading"></h2>
                 <button type="button" class="card__like" aria-label="Иконка лайка"></button>
@@ -44,12 +45,20 @@
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
 
+    <section class="popup popup_open_image">
+      <div class="popup__container">
+        <img class="popup__image">
+        <button class="popup__close-icon" aria-label="Закрыть"></button>
+        <p class="popup__image_title"></p>
+      </div>
+    </section>
+
     <section id="popup_edit" class="popup">
       <div class="popup__container">
         <form method="get" action="#"  name="form-profile" class="popup__form">
           <h2 class="popup__heading">Редактировать профиль</h2>
-          <input type="text" name="profile-name" value="Жак-Ив Кусто" class="popup__input popup__input_text_name">
-          <input type="text" name="info" value="Исследователь океана" class="popup__input popup__input_text_info">
+          <input type="text" name="profile-name" value="Жак-Ив Кусто" class="popup__input" id="name-input" required>
+          <input type="text" name="info" value="Исследователь океана" class="popup__input" id="job-input" required>
           <button type="submit" class="popup__button" aria-label="Сохранить">Сохранить</button>
         </form>
         <button class="popup__close-icon" aria-label="Закрыть"></button>
@@ -60,8 +69,8 @@
       <div class="popup__container">
         <form method="get" action="#"  name="form-add_card" class="popup__form">
           <h2 class="popup__heading">Новое место</h2>
-          <input type="text" placeholder="Название" name="card-name" class="popup__input popup__input_text_name">
-          <input type="text" placeholder="Ссылка на картинку" name="card-link" class="popup__input popup__input_text_info">
+          <input type="text" placeholder="Название" name="card-name" class="popup__input" id="image-title" required>
+          <input type="url" placeholder="Ссылка на картинку" name="card-link" class="popup__input" id="image-link" required>
           <button type="submit" class="popup__button" aria-label="Создать">Создать</button>
         </form>
         <button class="popup__close-icon" aria-label="Закрыть"></button>

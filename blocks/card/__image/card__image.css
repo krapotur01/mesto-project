@@ -3,4 +3,10 @@
   height: 282px;
   background: rgba(196, 196, 196, 1);
   border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.card__image:hover {
+  opacity: 0.9;
 }

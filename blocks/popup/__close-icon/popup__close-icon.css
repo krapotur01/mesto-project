@@ -1,8 +1,10 @@
 .popup__close-icon {
+  position: absolute;
   width: 32px;
   height: 32px;
   background-image: url(../../../image/popup__close-icon.svg);
-  margin-top: -40px;
+  top: -40px;
+  right: -40px;
   cursor: pointer;
   border: none;
   color: rgba(255, 255, 255, 1);
@@ -18,13 +20,14 @@
     width: 25px;
     height: 25px;
     background-size: cover;
-    margin-top: -30px;
+    top: -30px;
+    right: -30px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .popup__close-icon {
-    margin-top: 0;
+    right: 0px;
     align-self: flex-end;
     width: 20px;
     height: 20px;
