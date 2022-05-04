@@ -1,5 +1,8 @@
 .popup__image_title {
   position: absolute;
   left: 0;
-  bottom: -40px;
+  bottom: -35px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
 }

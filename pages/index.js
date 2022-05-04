@@ -13,7 +13,7 @@ const jobInput = formElementEdit.querySelector("#job-input");
 const profileName = document.querySelector(".profile__name");
 const profileText = document.querySelector(".profile__text");
 const galeryCards = document.querySelector(".galery__cards");
-const cardTemplate = document.querySelector("#card__template").content;
+const cardTemplate = galeryCards.querySelector("#card__template").content;
 
 popupButtonEdit.addEventListener("click", popupAddClassButtonEdit);
 popupButtonAdd.addEventListener("click", popupAddClassButtonAdd);
@@ -36,13 +36,6 @@ function popupAddClassButtonAdd() {
 
 function popupAddClassButtonImage() {
   popupOpenImage.classList.toggle("popup_opened");
-}
-
-function formSubmitHandlerEdit(evt) {
-  evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileText.textContent = jobInput.value;
-  popupAddClassButtonEdit();
 }
 
 const initialCards = [
@@ -82,50 +75,22 @@ initialCards.forEach(function (item) {
   galeryCards.prepend(cardItem);
 });
 
-function formSubmitHandlerAdd(evt) {
-  evt.preventDefault();
-  const imageLink = document.querySelector("#image-link");
-  const imageTitle = document.querySelector("#image-title");
-  const cardItem = cardTemplate.querySelector(".card__item").cloneNode(true);
-
-  cardItem.querySelector(".card__image").src = imageLink.value;
-  cardItem.querySelector(".card__image").alt = imageTitle.value;
-  cardItem.querySelector(".card__heading").textContent = imageTitle.value;
-
-  galeryCards.prepend(cardItem);
-
-  cardItem
-    .querySelector(".card__like")
-    .addEventListener("click", function (evt) {
-      evt.target.classList.toggle("card__like_active");
-    });
-
-  const cardTrash = document.querySelector(".card__trash");
-  cardTrash.addEventListener("click", function () {
-    const cardDelete = cardTrash.closest(".card__item");
-    cardDelete.remove();
-  });
-
-  popupAddClassButtonAdd();
-  formElementAdd.reset();
-}
-
-const cardLikes = document.querySelectorAll(".card__like");
-
 function cardLikeClick(evt) {
   evt.target.classList.toggle("card__like_active");
 }
+
+const cardLikes = document.querySelectorAll(".card__like");
 
 cardLikes.forEach(function (cardLike) {
   cardLike.addEventListener("click", cardLikeClick);
 });
 
-const cardTrashs = document.querySelectorAll(".card__trash");
-
 function cardDeleteBtn(evt) {
   const cardItem = evt.target.closest(".card__item");
   cardItem.remove();
 }
+
+const cardTrashs = document.querySelectorAll(".card__trash");
 
 cardTrashs.forEach(function (cardTrash) {
   cardTrash.addEventListener("click", cardDeleteBtn);
@@ -135,7 +100,7 @@ const cardImages = document.querySelectorAll(".card__image");
 
 function cardImageOpened(evt) {
   const cardItem = evt.target.closest('.card__item');
-  const cardImage = cardItem.querySelector(".card__image");
+  const cardImage = evt.target.closest(".card__image");
   const cardHeading = cardItem.querySelector(".card__heading");
 
   const popupContainer = document.querySelector('.popup__container');
@@ -148,7 +113,42 @@ function cardImageOpened(evt) {
   popupAddClassButtonImage();
 }
 
-
 cardImages.forEach(function (cardImage) {
   cardImage.addEventListener("click", cardImageOpened);
 });
+
+function formSubmitHandlerEdit(evt) {
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileText.textContent = jobInput.value;
+  popupAddClassButtonEdit();
+}
+
+function formSubmitHandlerAdd(evt) {
+  evt.preventDefault();
+  const imageLink = formElementAdd.querySelector("#image-link");
+  const imageTitle = formElementAdd.querySelector("#image-title");
+  const cardItem = cardTemplate.querySelector(".card__item").cloneNode(true);
+
+  cardItem.querySelector(".card__image").src = imageLink.value;
+  cardItem.querySelector(".card__image").alt = imageTitle.value;
+  cardItem.querySelector(".card__heading").textContent = imageTitle.value;
+
+  galeryCards.prepend(cardItem);
+
+  cardItem.querySelector(".card__like").addEventListener("click", function (evt) {
+      evt.target.classList.toggle("card__like_active");
+    });
+
+  const cardTrash = cardItem.querySelector(".card__trash");
+  cardTrash.addEventListener("click", function () {
+    const cardDelete = cardTrash.closest(".card__item");
+    cardDelete.remove();
+  });
+
+  const cardImage = cardItem.querySelector('.card__image');
+  cardImage.addEventListener("click", cardImageOpened);
+
+  popupAddClassButtonAdd();
+  formElementAdd.reset();
+}
