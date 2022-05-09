@@ -1,7 +1,7 @@
 .profile__button_popup_edit {
   grid-area: edit;
-  margin-bottom: 16px;
-  align-self: end;
+  margin-bottom: 23px;
+  align-self: center;
   padding: 11px;
   border: 1px solid rgba(255, 255, 255, 1);
   background-image: url(../../../../image/button_edit.svg);
@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 556px) {
   .profile__button_popup_edit {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     padding: 8px;
     background-size: 9px;
   }
@@ -36,9 +36,8 @@
 @media screen and (max-width: 425px) {
   .profile__button_popup_edit {
     width: 18px;
-    justify-self: end;
     padding: 8px 8px;
     background-size: 7px;
-    margin: 0 0 15px;
+    margin: 27px 0 4px 0px;
   }
 }
