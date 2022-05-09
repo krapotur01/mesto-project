@@ -55,35 +55,25 @@ function createCard(name, link) {
   cardImage.src = link;
   cardImage.link = name;
   cardItem.querySelector(".card__heading").textContent = name;
-
   galeryCards.prepend(cardItem);
 
-  const cardImages = document.querySelectorAll(".card__image");
-  cardImages.forEach((cardImage) => {
-    cardImage.addEventListener("click", cardImageOpened);
-  });
+  const cardImages = cardItem.querySelectorAll(".card__image");
+  cardImages.forEach(cardImage => cardImage.addEventListener("click", cardImageOpened));
 
-  const cardLikeClick = (evt) => {
-    evt.target.classList.toggle("card__like_active");
-  }
+  const cardLikeClick = evt => evt.target.classList.toggle("card__like_active");
+  const cardLikes = cardItem.querySelectorAll(".card__like");
+  cardLikes.forEach(cardLike => cardLike.addEventListener("click", cardLikeClick));
 
-  const cardLikes = document.querySelectorAll(".card__like");
-  cardLikes.forEach((cardLike) => {
-    cardLike.addEventListener("click", cardLikeClick);
-  });
-
-  const cardDeleteBtn = (evt) => {
+  const cardDeleteBtn = evt => {
     const cardItem = evt.target.closest(".card__item");
     cardItem.remove();
   }
-
-  const cardTrashs = document.querySelectorAll(".card__trash");
-  cardTrashs.forEach((cardTrash) => {
-    cardTrash.addEventListener("click", cardDeleteBtn);
-  });
+  const cardTrashs = cardItem.querySelectorAll(".card__trash");
+  cardTrashs.forEach(cardTrash => cardTrash.addEventListener("click", cardDeleteBtn));
 
   return cardItem;
 }
+
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
