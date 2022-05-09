@@ -45,7 +45,8 @@ const galeryCards = document.querySelector(".galery__cards");
 const cardTemplate = galeryCards.querySelector("#card__template").content;
 
 initialCards.forEach(function (item) {
-  createCard(item.name, item.link);
+  const card = createCard(item.name, item.link);
+  renderCard(card, galeryCards);
 });
 
 function createCard(name, link) {
@@ -55,7 +56,6 @@ function createCard(name, link) {
   cardImage.src = link;
   cardImage.link = name;
   cardItem.querySelector(".card__heading").textContent = name;
-  galeryCards.prepend(cardItem);
 
   const cardImages = cardItem.querySelectorAll(".card__image");
   cardImages.forEach(cardImage => cardImage.addEventListener("click", cardImageOpened));
@@ -74,6 +74,9 @@ function createCard(name, link) {
   return cardItem;
 }
 
+function renderCard(card, container) {
+  container.prepend(card);
+}
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
@@ -114,7 +117,8 @@ function formSubmitHandlerAdd(evt) {
   evt.preventDefault();
   const imageLink = formElementAdd.querySelector("#image-link");
   const imageTitle = formElementAdd.querySelector("#image-title");
-  createCard(imageTitle.value, imageLink.value);
+  const card = createCard(imageTitle.value, imageLink.value);
+  renderCard(card, galeryCards);
   closePopup(popupAdd);
   formElementAdd.reset();
 }
